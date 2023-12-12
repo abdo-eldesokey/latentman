@@ -63,7 +63,7 @@
                   <a href="https://peterwonka.net/" target="_blank">Peter Wonka</a></span>                  
                   </div>
 
-                  <div class="is-size-4 publication-authors">
+                  <div class="is-size-5 publication-authors">
                     <span class="author-block">KAUST, Saudi Arabia<br></span>
                   </div>
 
@@ -81,7 +81,7 @@
                 </a>
                 <!-- Github link -->
                 <span class="link-block">
-                  <a href="https://github.com/YOUR REPO HERE" target="_blank"
+                  <a href="https://github.com/abdo-eldesokey/text2ac-zero" target="_blank"
                   class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                     <i class="fab fa-github"></i>
@@ -115,21 +115,19 @@
     <h2 class="title is-4 has-text-justified-center">        
       <div class="icon-text">
         <span class="icon"><i class="fas fa-bolt" style="color: #38b75e;"></i></span>             
-        <span style="line-height: 1.5;"> Zero-Shot &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span>  
-        
-        <span class="icon"><i class="fas fa-quote-left fa-xs" style="color: #ffa200;"></i></span>             
-        <span style="line-height: 1.5;"> Purely Text-Based &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span> 
-        
+        <span style="line-height: 1.5;"> Zero-Shot &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;</span>
+                        
         <span class="icon"><i class="fas fa-walking " style="color: rgb(120, 100, 100);"></i></span>             
-        <span style="line-height: 1.5;"> Diverse Motions </span> <br>
+        <span style="line-height: 1.5;"> Diverse Motions </span> <br> 
 
-        <br>
-    
+        <span class="icon"><i class="fas fa-quote-left fa-xs" style="color: #ffa200;"></i></span>             
+        <span style="line-height: 1.5;"> Purely Text-Based &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span> 
+
         <span class="icon"><i class="fas fa-bars" style="color: #3882b7;"></i></span>             
-        <span style="line-height: 1.5;"> Temporally Consistenet  &nbsp; &nbsp;  &nbsp; &nbsp;</span> 
+        <span style="line-height: 1.5;"> Temporally Consistent  </span> <br>
         
         <span class="icon"><i class="fas fa-video-slash fa-xs" style="color: #ff0000;"></i></span>             
-        <span style="line-height: 1.5;">No training or tuning on videos </span> 
+        <span style="line-height: 1.5;">No videos needed for training/tuning or guidance </span> 
     
       </div>
     </h2> 
@@ -167,6 +165,27 @@
   <div class="hero-body">
     <div class="container">
       <div class="column has-text-centered">
+      <h2 class="title is-3">Summary</h2>
+      <img src="static/images/problem.jpg" alt="method" class="center">
+      <div class="column has-text-left is-size-5">
+      <ul>
+        <li>Text-to-Image (T2I) diffsuion models can generate diverse images of human characters.</li>
+        <li>However, generated images vary under any changes to the latent code or the guidance signal.</li>
+        <li>This makes it difficult to use T2I models for directly generating videos of human characters without video tuning or guidance.</li>
+        <li>We propose a new approach that employs motion diffusion models to generate motion guidance, while the video frames are generated using a pre-trained T2I diffusion model.</li>
+        <li>Our approach can produce consistent videos of animated characters <u>given only a textual prompt </u> without requiring video guidance, training or finetuning.</li>        
+      </ul>
+
+    </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+      <div class="column has-text-centered">
       <h2 class="title is-3">Method</h2>
       <img src="static/images/method.jpg" alt="method" class="center">
       <div class="column has-text-left is-size-5">
@@ -185,8 +204,31 @@
 </section>
 
 
+<!-- 
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div class="column has-text-centered">
+      <h2 class="title is-3">Results</h2>
+      
+      <div class="column has-text-left is-size-5">
+      <ul>
+        <li>Given a text prompt, we generate an animated skeleton using a motion diffusion model.</li>
+        <li>We fit a SMPL model to the skeleton, and we render a depth map and DensePose.</li>
+        <li>We compute dense cross-frame correspondences based on DensePose.</li>
+        <li>These correspondences are used to align the latents through the <b>Spatial Latent Alignment</b> module.</li>
+        <li>The consistency is improved further through a <b>Pixel-Wise Guidance</b> strategy.</li>        
+      </ul>
+
+    </div>
+      </div>
+    </div>
+  </div>
+</section>
+ -->
+
 <!-- Image carousel -->
-<section class="hero is-small is-light">
+<section class="hero is-small ">
   <div class="hero-body">
     <div class="container">
       <div class="column has-text-centered">
