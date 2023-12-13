@@ -54,7 +54,7 @@
         <div class="columns is-centered">
           <div class="column has-text-centered">
             <h1 class="title is-1 publication-title">Text2AC-Zero: Consistent Synthesis of Animated Characters using 2D Diffusion</h1>
-            <div class="is-size-4 publication-authors">
+            <div class="is-size-5 publication-authors">
               
               <!-- Paper authors -->
               <span class="author-block">
@@ -63,7 +63,7 @@
                   <a href="https://peterwonka.net/" target="_blank">Peter Wonka</a></span>                  
                   </div>
 
-                  <div class="is-size-5 publication-authors">
+                  <div class="is-size-6 publication-authors">
                     <span class="author-block">KAUST, Saudi Arabia<br></span>
                   </div>
 
@@ -72,7 +72,7 @@
 
                 <!-- ArXiv abstract Link -->
                 <span class="link-block">
-                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
+                  <a href="https://arxiv.org/abs/2312.07133" target="_blank"
                   class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                     <i class="ai ai-arxiv"></i>
@@ -163,11 +163,10 @@
 
 <section class="hero is-small">
   <div class="hero-body">
-    <div class="container">
-      <div class="column has-text-centered">
+    <div class="container has-text-centered">
       <h2 class="title is-3">Summary</h2>
-      <img src="static/images/problem.jpg" alt="method" class="center">
-      <div class="column has-text-left is-size-5">
+      <img src="static/images/problem.jpg" width="1000" alt="method" class="center">
+      <div class="column has-text-left" style="padding-left: 120px; padding-right: 120px;">
       <ul>
         <li>Text-to-Image (T2I) diffsuion models can generate diverse images of human characters.</li>
         <li>However, generated images vary under any changes to the latent code or the guidance signal.</li>
@@ -176,7 +175,6 @@
         <li>Our approach can produce consistent videos of animated characters <u>given only a textual prompt </u> without requiring video guidance, training or finetuning.</li>        
       </ul>
 
-    </div>
       </div>
     </div>
   </div>
@@ -187,8 +185,8 @@
     <div class="container">
       <div class="column has-text-centered">
       <h2 class="title is-3">Method</h2>
-      <img src="static/images/method.jpg" alt="method" class="center">
-      <div class="column has-text-left is-size-5">
+      <img src="static/images/method.jpg"  width="1000"  alt="method" class="center">
+      <div class="column has-text-left" style="padding-left: 120px; padding-right: 120px;">
       <ul>
         <li>Given a text prompt, we generate an animated skeleton using a motion diffusion model.</li>
         <li>We fit a SMPL model to the skeleton, and we render a depth map and DensePose.</li>
@@ -234,7 +232,8 @@
       <div class="column has-text-centered">
         <h2 class="title is-size-3">Temporal Consistency Comparison</h2>
         <br>
-        <div class="content has-text-justified is-size-6">
+      <div class="column has-text-left" style="padding-left: 150px; padding-right: 150px;">
+
           We compare against two zero-shot videos synthesis: <a href="https://ljzycmd.github.io/projects/MasaCtrl" target="_blank">MasaCtrl</a> and <a href="https://text2video-zero.github.io" target="_blank"> Text2Video-Zero </a>. 
           <br>
           All approaches are fed with the <u>depth guidance</u> that we generate based on a motion diffusion odel.        
