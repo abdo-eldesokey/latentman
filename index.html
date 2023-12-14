@@ -53,7 +53,7 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Text2AC-Zero: Consistent Synthesis of Animated Characters using 2D Diffusion</h1>
+            <h1 class="title is-2 publication-title">Text2AC-Zero: Consistent Synthesis of Animated Characters using 2D Diffusion</h1>
             <div class="is-size-5 publication-authors">
               
               <!-- Paper authors -->
@@ -101,16 +101,13 @@
 
 <!-- Teaser-->
 <section class="hero teaser">
-  <div class="is-flex container is-max-desktop">
+  <div class="column has-text-centered">
     <div class="hero-body">
-
-      <center>
-      <video poster="" id="tree" autoplay controls muted loop width="512" height="512">
+      <video poster="" id="tree" autoplay controls muted loop width="480px" >
         <!-- Your video here -->
-        <source src="static/videos/teaser.mp4"
+        <source src="static/videos/teaser_compressed.mp4"
         type="video/mp4">
       </video>
-    </center>       
     <br>
     <h2 class="title is-4 has-text-justified-center">        
       <div class="icon-text">
@@ -166,7 +163,7 @@
     <div class="container has-text-centered">
       <h2 class="title is-3">Summary</h2>
       <img src="static/images/problem.jpg" width="1000" alt="method" class="center">
-      <div class="column has-text-left" style="padding-left: 120px; padding-right: 120px;">
+      <div class="column has-text-left" style="padding-left: 5%; padding-right: 5%;">
       <ul>
         <li>Text-to-Image (T2I) diffsuion models can generate diverse images of human characters.</li>
         <li>However, generated images vary under any changes to the latent code or the guidance signal.</li>
@@ -186,7 +183,7 @@
       <div class="column has-text-centered">
       <h2 class="title is-3">Method</h2>
       <img src="static/images/method.jpg"  width="1000"  alt="method" class="center">
-      <div class="column has-text-left" style="padding-left: 120px; padding-right: 120px;">
+      <div class="column has-text-left" style="padding-left: 5%; padding-right: 5%;">
       <ul>
         <li>Given a text prompt, we generate an animated skeleton using a motion diffusion model.</li>
         <li>We fit a SMPL model to the skeleton, and we render a depth map and DensePose.</li>
@@ -206,7 +203,7 @@
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
-      <div class="column has-text-centered" style="padding-left: 120px; padding-right: 120px;">
+      <div class="column has-text-centered" style="padding-left: 5%; padding-right: 5%;">
       <h2 class="title is-3">Results</h2>
       <video poster="" id="video5" autoplay controls muted loop width="100%">
         <source src="static/videos/jumpy_dance_interpolated.mp4" type="video/mp4">
@@ -246,7 +243,7 @@
       <div class="column has-text-centered">
         <h2 class="title is-size-3">Temporal Consistency Comparison</h2>
         <br>
-      <div class="column has-text-left" style="padding-left: 150px; padding-right: 150px;">
+      <div class="column has-text-left" style="padding-left: 5%; padding-right: 5%;">
 
           We compare against two zero-shot videos synthesis: <a href="https://ljzycmd.github.io/projects/MasaCtrl" target="_blank">MasaCtrl</a> and <a href="https://text2video-zero.github.io" target="_blank"> Text2Video-Zero </a>. 
           <br>
@@ -260,8 +257,7 @@
     </div>
 
       <div id="results-carousel" class="carousel results-carousel">
-
-        <div class="item">
+        <div class="item item-video1">
         <!-- Your image here -->
         <video poster="" id="video1" autoplay controls muted loop height="100%">
           <!-- Your video file here -->
@@ -272,7 +268,7 @@
         </h2>
         </div>
 
-        <div class="item">
+        <div class="item item-video2">
           <!-- Your image here -->
           <video poster="" id="video2" autoplay controls muted loop height="100%">
             <!-- Your video file here -->
@@ -283,7 +279,7 @@
           </h2>
         </div>
 
-        <div class="item"> 
+        <div class="item item-video3"> 
           <!-- Your image here -->
           <video poster="" id="video3" autoplay controls muted loop height="100%">
             <!-- Your video file here -->
@@ -294,9 +290,9 @@
           </h2>
         </div>
 
-      <div class="item">
+      <div class="item item-video4">
         <!-- Your image here -->
-        <video poster="" id="video5" autoplay controls muted loop height="100%">
+        <video poster="" id="video4" autoplay controls muted loop height="100%">
           <!-- Your video file here -->
           <source src="static/videos/ballerina_interpolated.mp4" type="video/mp4">
         </video>
@@ -305,9 +301,9 @@
         </h2>
       </div>
 
-      <div class="item">
+      <div class="item item-video5">
         <!-- Your image here -->
-        <video poster="" id="video4" autoplay controls muted loop height="100%">
+        <video poster="" id="video5" autoplay controls muted loop height="100%">
           <!-- Your video file here -->
           <source src="static/videos/beach_interpolated.mp4" type="video/mp4">
         </video>
