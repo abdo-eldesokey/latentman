@@ -5,9 +5,9 @@
   <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
   <!-- Replace the content tag with appropriate information -->
   <meta name="description" content="">
-  <meta property="og:title" content="Text2AC-Zero"/>
-  <meta property="og:description" content="Text2AC-Zero: Consistent Synthesis of Animated Characters using 2D Diffusion"/>
-  <meta property="og:url" content="https://abdo-eldesokey.github.io/text2ac-zero/"/>
+  <meta property="og:title" content="LatentMan"/>
+  <meta property="og:description" content="LatentMan: Generating Consistent Animated Characters using Image Diffusion Models"/>
+  <meta property="og:url" content="https://abdo-eldesokey.github.io/latentman/"/>
   <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
   <meta property="og:image" content="static/images/method.jpg" />
   <meta property="og:image:width" content="1200"/>
@@ -24,7 +24,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <title>Text2AC-Zero: Consistent Synthesis of Animated Characters using 2D Diffusion</title>
+  <title>LatentMan: Generating Consistent Animated Characters using Image Diffusion Models</title>
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
@@ -53,7 +53,7 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-2 publication-title">Text2AC-Zero: Consistent Synthesis of Animated Characters using 2D Diffusion</h1>
+            <h1 class="title is-2 publication-title">LatentMan: Generating Consistent Animated Characters using Image Diffusion Models</h1>
             <div class="is-size-5 publication-authors">
               
               <!-- Paper authors -->
@@ -81,13 +81,14 @@
                 </a>
                 <!-- Github link -->
                 <span class="link-block">
-                  <a href="https://github.com/abdo-eldesokey/text2ac-zero" target="_blank"
+                  <a href="https://github.com/abdo-eldesokey/latentman" target="_blank"
                   class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                     <i class="fab fa-github"></i>
                   </span>
                   <span>Code</span>
                 </a>
+                <h1 class="is-size-5 ">CVPRW 2024</h1>
               </span>
               </span>
             </div>
@@ -142,14 +143,13 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified is-size-6">
           <p>
-          We propose a zero-shot approach for consistent Text-to-Animated-Characters synthesis based on <b>pre-trained Text-to-Image (T2I) </b> diffusion models.
-          Existing Text-to-Video (T2V) methods are expensive to train and require large-scale video datasets to produce diverse characters and motions. 
-          At the same time, their zero-shot alternatives fail to produce temporally consistent videos.
-          We strive to bridge this gap and we introduce a zero-shot approach that produces temporally consistent videos of animated characters and requires no training or fine-tuning.
-          We leverage existing <b>text-based motion diffusion models </b> to generate diverse motions that we utilize to guide a T2I model.
-          To achieve temporal consistency, we introduce the <b>Spatial Latent Alignment</b> module that exploits cross-frame dense correspondences that we compute to align the latents of the video frames.
-          Furthermore, we propose <b>Pixel-Wise Guidance </b> to steer the diffusion process in a direction that minimizes visual discrepancies.
-          Our proposed approach generates temporally consistent videos with diverse motions and styles, outperforming existing zero-shot T2V approaches in terms of pixel-wise consistency and user preference.
+            We propose a zero-shot approach for generating consistent videos of animated characters based on <b>Text-to-Image (T2I)</b> diffusion models.
+            Existing Text-to-Video (T2V) methods are expensive to train and require large-scale video datasets to produce diverse characters and motions. 
+            At the same time, their zero-shot alternatives fail to produce temporally consistent videos with continuous motion.
+            We strive to bridge this gap, and we introduce LatentMan, which leverages existing text-based motion diffusion models to generate diverse continuous motions to guide the T2I model.
+            To boost the temporal consistency, we introduce the <b>Spatial Latent Alignment</b> module that exploits cross-frame dense correspondences that we compute to align the latents of the video frames.
+            Furthermore, we propose <b>Pixel-Wise Guidance</b> to steer the diffusion process in a direction that minimizes visual discrepancies between frames.
+            Our proposed approach outperforms existing zero-shot T2V approaches in generating videos of animated characters in terms of pixel-wise consistency and user preference.
           </p>
         </div>
       </div>
@@ -165,11 +165,11 @@
       <img src="static/images/problem.jpg" width="1000" alt="method" class="center">
       <div class="column has-text-left" style="padding-left: 5%; padding-right: 5%;">
       <ul>
-        <li>Text-to-Image (T2I) diffsuion models can generate diverse images of human characters.</li>
+        <li>Text-to-Image (T2I) diffusion models can generate diverse images of human characters.</li>
         <li>However, generated images vary under any changes to the latent code or the guidance signal.</li>
         <li>This makes it difficult to use T2I models for directly generating videos of human characters without video tuning or guidance.</li>
-        <li>We propose a new approach that employs motion diffusion models to generate motion guidance, while the video frames are generated using a pre-trained T2I diffusion model.</li>
-        <li>Our approach can produce consistent videos of animated characters <u>given only a textual prompt </u> without requiring video guidance, training or finetuning.</li>        
+        <li>We propose a new approach that employs motion diffusion models to generate a sequence of SMPL models while the video frames are generated using a pre-trained T2I diffusion model.</li>
+        <li>Our approach can produce consistent videos of animated characters <u>given only a textual prompt </u> without requiring video guidance, training, or finetuning.</li>        
       </ul>
 
       </div>
