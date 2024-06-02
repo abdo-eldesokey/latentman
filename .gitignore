@@ -1,0 +1,11 @@
+build/
+__pycache__
+*.gif
+*.mp4
+*.pyc
+external/mdm/body_models/smpl
+external/mdm/dataset/HumanML3D
+external/mdm/glove
+external/mdm/kit
+external/mdm/save
+external/mdm/t2m
