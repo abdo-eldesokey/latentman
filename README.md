@@ -33,5 +33,11 @@ Parts of this code base are adapted from [MDM](https://github.com/GuyTevet/motio
 ## Citation
 If you use this code or parts of it, please cite our paper:
 ```
-
+@inproceedings{eldesokey2024latentman,
+  title={LATENTMAN: Generating Consistent Animated Characters using Image Diffusion Models},
+  author={Eldesokey, Abdelrahman and Wonka, Peter},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={7510--7519},
+  year={2024}
+}
 ```
